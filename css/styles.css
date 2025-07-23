@@ -10831,8 +10831,9 @@ textarea.form-control-lg {
 
 /* This is a single-line comment */
 body {
-  background: url("https://vapaalassi.github.io/traprun/assets/logo-cropped.png") no-repeat center center;
-  background-size: 550px auto; /* Adjust size as needed */
-  background-attachment: fixed; /* 'fixed' makes it stay still, 'scroll' makes it move with content */
+  background: url("https://vapaalassi.github.io/traprun/assets/logo-cropped.png") no-repeat;
+  background-position: center 70%; /* 20px from bottom */
+  background-size: 550px auto;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
