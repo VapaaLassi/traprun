@@ -10825,8 +10825,14 @@ textarea.form-control-lg {
   }
 }
 
+´p.hidden {
+    color: white;
+}
+
 /* This is a single-line comment */
 body {
-  background: url("https://vapaalassi.github.io/traprun/assets/logo-cropped.png") no-repeat center center fixed;
-  background-size: cover;
+  background: url("https://vapaalassi.github.io/traprun/assets/logo-cropped.png") no-repeat center center;
+  background-size: 700px auto; /* Adjust size as needed */
+  background-attachment: fixed; /* 'fixed' makes it stay still, 'scroll' makes it move with content */
+  background-repeat: no-repeat;
 }
