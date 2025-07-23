@@ -91,6 +91,10 @@
   }
 }
 
+p.hidden {
+    color: white;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -10823,10 +10827,6 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-
-´p.hidden {
-    color: white;
 }
 
 /* This is a single-line comment */
