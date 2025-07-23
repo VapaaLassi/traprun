@@ -10824,6 +10824,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+/* This is a single-line comment */
 body {
   background: url("https://vapaalassi.github.io/traprun/assets/thisisatraprun_logo-only-1.png") no-repeat center center fixed;
   background-size: cover;
