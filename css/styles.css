@@ -10832,7 +10832,7 @@ textarea.form-control-lg {
 /* This is a single-line comment */
 body {
   background: url("https://vapaalassi.github.io/traprun/assets/logo-cropped.png") no-repeat;
-  background-position: center 70%; /* 20px from bottom */
+  background-position: center 80%; /* 20px from bottom */
   background-size: 550px auto;
   background-attachment: fixed;
   background-repeat: no-repeat;
