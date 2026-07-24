@@ -3,8 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="This is a Trap, Run! TTRPG show landing page." />
         <title>This is a Trap, Run! - A TTRPG show that doesn't exist.</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -13,23 +12,89 @@
     </head>
     <body>
         <!-- Page Content-->
-        <section>
+        <section class="py-5">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-6">
-                        <h1 class="mt-5">This is a Trap, Run! is not a real show.</h1>
+                    <div class="col-lg-6 text-center">
+                        
+                        <!-- Top Logo Element -->
+                        <img 
+                          src="https://vapaalassi.github.io/traprun/assets/logo-cropped.png" 
+                          alt="This is a Trap, Run! Logo" 
+                          class="img-fluid site-logo mb-4"
+                        />
+
+                        <!-- Main Heading & Paragraphs -->
+                        <h1 class="mb-3">This is a Trap, Run! is not a real show.</h1>
                         <p>We just made it up as a joke and made all this extra stuff cause it seemed like a fun thing to do. There are no episodes to listen to.</p>
 
-                        <p> The campaign though is real and we will keep playing and creating new classic episodes. </p>
+                        <p>The campaign though is real and we will keep playing and creating new classic episodes.</p>
 
-                        <p> Thank you for showing up, we had such a great time at our RopeCon 25 Special (<i>Bubbles, the dead clay golem</i>). See you at Ropecon '26? </p>
+                        <p>Thank you for showing up, we had such a great time at our RopeCon 25 Special (<i>Burning the Records with Bubbles</i>). See you at Ropecon '26?</p>
+
+                        <!-- Countdown Timer Card -->
+                        <div class="my-5 p-4 border rounded text-center bg-light shadow-sm">
+                            <h3 class="h5 text-uppercase text-muted mb-3">Ropecon '26 Countdown</h3>
+                            <div id="countdown" class="d-flex justify-content-center align-items-center gap-3 fs-3 fw-bold">
+                                <div class="text-center">
+                                    <span id="days">0</span>
+                                    <div class="fs-6 fw-normal text-muted">Days</div>
+                                </div>
+                                <div>:</div>
+                                <div class="text-center">
+                                    <span id="hours">0</span>
+                                    <div class="fs-6 fw-normal text-muted">Hours</div>
+                                </div>
+                                <div>:</div>
+                                <div class="text-center">
+                                    <span id="minutes">0</span>
+                                    <div class="fs-6 fw-normal text-muted">Minutes</div>
+                                </div>
+                                <div>:</div>
+                                <div class="text-center">
+                                    <span id="seconds">0</span>
+                                    <div class="fs-6 fw-normal text-muted">Seconds</div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- Countdown Timer Script -->
+        <script>
+            const targetDate = new Date("2026-07-24T19:00:00+03:00").getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById("countdown").innerHTML = "<div class='text-primary fw-bold'>RopeCon '26 is Live!</div>";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = days;
+                document.getElementById("hours").innerText = hours;
+                document.getElementById("minutes").innerText = minutes;
+                document.getElementById("seconds").innerText = seconds;
+            }
+
+            updateCountdown();
+            const timerInterval = setInterval(updateCountdown, 1000);
+        </script>
     </body>
 </html>
